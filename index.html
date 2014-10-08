@@ -7,7 +7,55 @@
     <script src="js/angular.js"></script>
 </head>
 <body ng-app>
-
+<table ng-init='products = [
+    {
+        "productId": 1,
+        "productName": "Leaf Rake",
+        "productCode": "GDN-0011",
+        "releaseDate": "March 19, 2009",
+        "description": "leaf rake with 18-inch handle.",
+        "cost": 9.00,
+        "price": 19.95,
+        "category": "garden",
+        "tags": [ "leaf", "tool" ],
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous.png"
+    },
+    {
+        "productId": 5,
+        "productName": "Hammer",
+        "productCode": "GDN-0011",
+        "releaseDate": "March 19, 2009",
+        "description": "leaf rake with 18-inch handle.",
+        "cost": 9.00,
+        "price": 19.95,
+        "category": "garden",
+        "tags": [ "leaf", "tool" ],
+        "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous.png"
+    }
+]'>
+    <thead>
+    <tr>
+        <td>Image</td>
+        <td>Product</td>
+        <td>Code</td>
+        <td>Available</td>
+        <td>Price</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="product in products">
+        <td>
+            <img ng-src="{{product.imageUrl}}"
+                 style="width:50px;margin:2px"
+                 title="{{product.productName}}"/>
+        </td>
+        <td>{{ product.productName }}</td>
+        <td>{{ product.productCode }}</td>
+        <td>{{ product.releaseDate }}</td>
+        <td>{{ product.price | currency }}</td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
