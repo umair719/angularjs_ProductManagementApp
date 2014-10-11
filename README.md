@@ -1,9 +1,9 @@
 angularjs_ProductManagementApp
 ==============================
 
-Full featured Product Managment App
+Full featured Product Management App
 
-Writting in AngularJS
+Written in AngularJS
 
 From PluralSight AngularJS Advance Training
 
